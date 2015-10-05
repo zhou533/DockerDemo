@@ -175,6 +175,8 @@
                         </resource>
                     </resources>
 
+                    <exposes>8080</exposes>
+
                     <cmd>["catalina.sh", "run"]</cmd>
                 </configuration>
 
