@@ -160,8 +160,15 @@
                 <configuration>
                     <imageName>jieqianhua/${project.artifactId}</imageName>
                     <baseImage>tomcat:7-jre7</baseImage>
-                    <dockerDirectory>${project.basedir}</dockerDirectory>
-                    <pushImage>false</pushImage>
+                    <entryPoint>["catalina.sh", "run"]</entryPoint>
+                    
+                    <resources>
+                        <resource>
+                            <directory>${project.build.directory}</directory>
+                            <include>ROOT.war</include>
+                            <targetPath>/usr/local/tomcat/webapps/</targetPath>
+                        </resource>
+                    </resources>
                 </configuration>
 
                 <executions>
