@@ -163,12 +163,13 @@
 
                     <runs>
                         <run>
-                            ["rm", "-fr", "/usr/local/tomcat/webapps/*"]
+                            ["rm", "-fr", "/usr/local/tomcat/webapps/ROOT"]
                         </run>
                     </runs>
+
                     <resources>
                         <resource>
-                            <directory>./target</directory>
+                            <directory>${project.build.directory}</directory>
                             <include>ROOT.war</include>
                             <targetPath>/usr/local/tomcat/webapps/</targetPath>
                         </resource>
