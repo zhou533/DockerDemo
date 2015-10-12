@@ -180,6 +180,9 @@
                     </exposes>
 
                     <cmd>["catalina.sh", "run"]</cmd>
+
+                    <serverId>docker-jqh</serverId>
+                    <registryUrl>http://localhost:5000</registryUrl>
                 </configuration>
 
                 <executions>
